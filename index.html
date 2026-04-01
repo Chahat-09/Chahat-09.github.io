@@ -1,83 +1,134 @@
-<!DOCTYPE html>
-<html>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <title>Insight Daily</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chahat News</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    header {
-      background-color: #111;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+}
 
-    .container {
-      width: 80%;
-      margin: auto;
-      margin-top: 30px;
-    }
+header {
+  text-align: center;
+  padding: 40px;
+}
 
-    .article {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+h1 {
+  margin: 0;
+}
 
-    a {
-      text-decoration: none;
-      color: black;
-    }
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
 
-    a:hover {
-      color: darkred;
-    }
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  </style>
+.card {
+  background: white;
+  color: black;
+  width: 280px;
+  margin: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #ff7a18;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #ff4e50;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Insight Daily</h1>
-  <p>Independent News & Analysis</p>
+  <h1>Chahat News</h1>
+  <p>Latest Updates & Stories</p>
 </header>
 
 <div class="container">
+  <div class="news-grid">
 
-  <div class="article">
-    <h2><a href="news1.html">Education Reform Signals Shift Toward Skill-Based Learning</a></h2>
-    <p>A closer look at how policy changes may impact students and institutions.</p>
+    <!-- NEWS 1 -->
+    <div class="card">
+      <img src="images/news1.jpg">
+      <div class="card-content">
+        <h3>News Title 1</h3>
+        <p>Short description of news...</p>
+        <a href="news1.html" class="btn">Read More</a>
+      </div>
+    </div>
+
+    <!-- NEWS 2 -->
+    <div class="card">
+      <img src="images/news2.jpg">
+      <div class="card-content">
+        <h3>News Title 2</h3>
+        <p>Short description of news...</p>
+        <a href="news2.html" class="btn">Read More</a>
+      </div>
+    </div>
+
+    <!-- NEWS 3 -->
+    <div class="card">
+      <img src="images/news3.jpg">
+      <div class="card-content">
+        <h3>News Title 3</h3>
+        <p>Short description of news...</p>
+        <a href="news3.html" class="btn">Read More</a>
+      </div>
+    </div>
+
   </div>
-
-  <div class="article">
-    <h2><a href="news2.html">Urban Flooding Raises Questions About City Planning</a></h2>
-    <p>Heavy rainfall exposes infrastructure gaps in major urban areas.</p>
-  </div>
-
-  <div class="article">
-    <h2><a href="news3.html">AI Tools Are Reshaping Workplace Productivity</a></h2>
-    <p>Businesses begin adapting to a rapidly evolving technological landscape.</p>
-  </div>
-
-  <div class="article">
-    <h2><a href="news4.html">Global Cricket Tournament Opens With Strong Competition</a></h2>
-    <p>Teams show early promise as international matches begin.</p>
-  </div>
-
-  <div class="article">
-    <h2><a href="news5.html">Youth-Led Climate Initiatives Gain Momentum</a></h2>
-    <p>Students take active roles in environmental awareness and action.</p>
-  </div>
-
 </div>
+
+<footer>
+  <p>© 2026 Chahat News</p>
+</footer>
 
 </body>
 </html>
