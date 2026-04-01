@@ -1,4 +1,3 @@
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,44 +10,83 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #667eea, #764ba2);
+  background: #f4f4f4;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #111;
   color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
 }
 
-header {
-  text-align: center;
-  padding: 40px;
-}
-
-h1 {
+.navbar h2 {
   margin: 0;
 }
 
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  color: white;
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+/* SECTION */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 20px;
 }
 
+.section-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border-left: 5px solid red;
+  padding-left: 10px;
+}
+
+/* NEWS GRID */
 .news-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 20px;
 }
 
 .card {
   background: white;
-  color: black;
-  width: 280px;
-  margin: 15px;
-  border-radius: 15px;
+  width: 300px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
 }
 
 .card img {
@@ -61,21 +99,26 @@ h1 {
   padding: 15px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 8px 15px;
-  background: #ff7a18;
-  color: white;
-  border-radius: 20px;
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.card a {
   text-decoration: none;
-  margin-top: 10px;
+  color: red;
+  font-weight: bold;
 }
 
-.btn:hover {
-  background: #ff4e50;
-}
-
+/* FOOTER */
 footer {
+  background: #111;
+  color: white;
   text-align: center;
   padding: 20px;
   margin-top: 30px;
@@ -85,41 +128,56 @@ footer {
 
 <body>
 
-<header>
-  <h1>Chahat News</h1>
-  <p>Latest Updates & Stories</p>
-</header>
+<!-- NAVBAR -->
+<div class="navbar">
+  <h2>Chahat News</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">India</a>
+    <a href="#">World</a>
+    <a href="#">Business</a>
+  </div>
+</div>
 
+<!-- HERO NEWS -->
+<div class="hero">
+  <img src="images/hero.jpg">
+  <div class="hero-text">
+    <h1>India Faces Rising Heatwave Across Multiple States</h1>
+    <p>Authorities issue alerts as temperatures continue to soar</p>
+  </div>
+</div>
+
+<!-- TOP STORIES -->
 <div class="container">
+  <div class="section-title">Top Stories</div>
+
   <div class="news-grid">
 
-    <!-- NEWS 1 -->
     <div class="card">
       <img src="images/news1.jpg">
       <div class="card-content">
-        <h3>News Title 1</h3>
-        <p>Short description of news...</p>
-        <a href="news1.html" class="btn">Read More</a>
+        <h3>Stock Markets Show Volatility Amid Global Tensions</h3>
+        <p>Investors remain cautious as markets fluctuate worldwide.</p>
+        <a href="news1.html">Read More</a>
       </div>
     </div>
 
-    <!-- NEWS 2 -->
     <div class="card">
       <img src="images/news2.jpg">
       <div class="card-content">
-        <h3>News Title 2</h3>
-        <p>Short description of news...</p>
-        <a href="news2.html" class="btn">Read More</a>
+        <h3>New Education Policy Brings Major Changes</h3>
+        <p>Focus shifts toward skill-based and flexible learning models.</p>
+        <a href="news2.html">Read More</a>
       </div>
     </div>
 
-    <!-- NEWS 3 -->
     <div class="card">
       <img src="images/news3.jpg">
       <div class="card-content">
-        <h3>News Title 3</h3>
-        <p>Short description of news...</p>
-        <a href="news3.html" class="btn">Read More</a>
+        <h3>Tech Industry Sees Rapid Growth in AI Sector</h3>
+        <p>Companies invest heavily in artificial intelligence innovation.</p>
+        <a href="news3.html">Read More</a>
       </div>
     </div>
 
@@ -127,7 +185,7 @@ footer {
 </div>
 
 <footer>
-  <p>© 2026 Chahat News</p>
+  <p>© 2026 Chahat News | All Rights Reserved</p>
 </footer>
 
 </body>
